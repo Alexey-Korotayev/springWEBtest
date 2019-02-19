@@ -1,0 +1,12 @@
+TABLE {
+    border: 1px solid black;
+    font-size: 16px;
+}
+TD, TH {
+    padding: 5px;
+}
+TH {
+    text-align: left;
+    background: black;
+    color: white;
+}
