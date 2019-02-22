@@ -16,4 +16,28 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+    @Override
+    public void addUser(User user) throws Exception {
+        if ( user.getName() == null || user.getName().isEmpty()) {
+            throw new Exception("Не заполнено имя");
+        } else {
+            userDao.addUser(user);
+        }
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return userDao.getUserById(id);
+    }
+
+    @Override
+    public void deleteUserById(int id) {
+        userDao.deleteUserById(id);
+    }
+
+    @Override
+    public void update(User user) {
+        userDao.update(user);
+    }
 }

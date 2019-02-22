@@ -20,6 +20,10 @@
     <title>Users</title>
 </head>
 <body>
+<form action="/addUser">
+    <input type="submit" value="Add new user" />
+</form>
+
     <h1>Users list</h1>
     <table>
         <tr>
@@ -31,9 +35,11 @@
     <#list users as user>
     <tr>
         <td>${user.id}</td>
-        <td>${user.name}</td>
+        <td><a href="/user/${user.id}">${user.name}</a></td>
         <td>${user.email}</td>
         <td>${user.age}</td>
+        <td><a href="/update/${user.id}">edit</a></td>
+        <td><a href="/delete/${user.id}">delete</a></td>
     </tr>
     </#list>
     </table>

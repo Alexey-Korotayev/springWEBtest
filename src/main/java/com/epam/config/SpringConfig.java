@@ -7,6 +7,7 @@ import com.epam.services.TestBean;
 import com.epam.services.UserService;
 import com.epam.services.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Configuration
+@ComponentScan(basePackages = {"com.epam.services", "com.epam.dao"})
 public class SpringConfig {
 
     @Bean
@@ -49,8 +51,12 @@ public class SpringConfig {
         return new UserDaoImpl(getJdbcTemplate());
     }
 
+    /*
+    @ComponentScan(basePackages = "com.epam.services")
+
     @Bean
     public UserService getUserService(){
         return new UserServiceImpl();
     }
+    */
 }
