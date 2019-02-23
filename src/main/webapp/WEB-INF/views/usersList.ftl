@@ -31,6 +31,8 @@
             <th>Name</th>
             <th>Email</th>
             <th>Age</th>
+            <th></th>
+            <th></th>
         </tr>
     <#list users as user>
     <tr>

@@ -3,13 +3,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Spring of title </title>
+    <title>Start page </title>
+    <style type="text/css">
+        H1 {
+            font-size: 20px;
+            background: black;
+            color: white;
+            height: 40px;
+            margin-top: 10px;
+            width: 30%;        }
+        P {
+            font-size: 16px;
+        }
+        A {
+            font-size: 16px;
+            color: deepskyblue;
+        }
+    </style>
+
 </head>
 
 <body>
-<p> Insex.ftl ! </p>
-<p> Hello Spring ! </p>
-<a href="/hello">Hello template</a>
+<h1> Start page of tests spring project </h1>
+<p> Hello Spring ! (Insex.ftl)</p>
+<br>
+<a href="/hello">Go to -> Hello template</a>
 </body>
 
 </html>
